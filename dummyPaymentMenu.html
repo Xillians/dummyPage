@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test PaymentMenu Container</title>
+        <script language="javascript">
+            var script = document.createElement("script");
+            script.setAttribute("src", window.location.search.replace("?", ""));
+            document.getElementsByTagName("head")[0].appendChild(script);
+            function kickit() {
+                payex.hostedView.paymentMenu({container: 'payment-container', style: {
+                    body: {
+                        backgroundColor: "cyan"
+                    }                        
+                }}).open();
+            }
+        </script>
+    </head>
+    <body onload="kickit()">        
+        <div id="payment-container"></div>
+    </body>
+</html>
