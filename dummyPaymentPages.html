@@ -8,8 +8,27 @@
         script.setAttribute("src", window.location.search.replace("?", ""));
         document.getElementsByTagName("head")[0].appendChild(script);
         function kickit() {
-            payex.hostedView.creditCard({
+            payex.hostedView.swish({
                 container: 'payment-container',
+                style: {
+                    button: {
+                        font: "20px Comic sans MS",
+                        backgroundColor: "#DBFF00",
+                        color: "#EE0EDB"
+                    },
+                    body: {
+                        backgroundColor: "#1DEAFF",
+                        font: "14px Comic sans MS"
+                    },
+                    menuCard: {
+                        font: "18px Comic sans MS",
+                        backgroundColor: "#00FF00",
+                        color: "#A530F3",
+                        selected: {
+                            backgroundColor: "#000000"
+                        }
+                    }
+                }
             }).open();
         }
     </script>
