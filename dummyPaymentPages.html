@@ -3,39 +3,21 @@
 
 <head>
     <title>Test Payment Container</title>
+    <link rel="stylesheet" href="./styles/styles.css">
     <script language="javascript">
         var script = document.createElement("script");
         script.setAttribute("src", window.location.search.replace("?", ""));
         document.getElementsByTagName("head")[0].appendChild(script);
         function kickit() {
             payex.hostedView.swish({
-                container: 'payment-container',
-                style: {
-                    button: {
-                        font: "20px Comic sans MS",
-                        backgroundColor: "#DBFF00",
-                        color: "#EE0EDB"
-                    },
-                    body: {
-                        backgroundColor: "#1DEAFF",
-                        font: "14px Comic sans MS"
-                    },
-                    menuCard: {
-                        font: "18px Comic sans MS",
-                        backgroundColor: "#00FF00",
-                        color: "#A530F3",
-                        selected: {
-                            backgroundColor: "#000000"
-                        }
-                    }
-                }
+                container: 'payment-container'
             }).open();
         }
     </script>
 </head>
 
 <body onload="kickit()">
-    <div id="payment-container"></div>
+    <div class="payment", id="payment-container"></div>
 </body>
 
 </html>
